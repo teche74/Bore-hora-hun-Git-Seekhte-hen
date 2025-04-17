@@ -150,3 +150,43 @@ Server ki zarurat sirf tab padti hai jab tum changes push ya pull karte ho.
 
 ![Screenshot 2025-03-31 105741](https://github.com/user-attachments/assets/796aabd4-d985-482b-a481-2da5c7080be4)
 
+
+
+
+> Arey ruk ja! Ek zabardast baat to batana bhool hi gaye the…
+> Jab bhi koi file Git mein hoti hai (yaani tracked) — toh woh teen powerful avasthaon (states) mein se kisi ek mein hoti hai! 😯✨
+
+> Soch lo jaise koi file Git ka warrior ban chuki hai — aur ab uska safar shuru hota hai…
+
+## 3 States of File in Git
+
+### Modified 
+> Jab tum kisi file ko edit karte ho, ya koi nayi file bana lete ho —
+> Toh Git kehta hai:
+> “Hmm... kuch toh badla hai!”
+
+> Aise files ko Modified state mein rakha jata hai.
+> Matlab: Changes hue hain, lekin abhi Git ko pata nahi chala ki tum inko seriously lena chahte ho ya nahi. 😏
+
+### Staged 
+
+> Ab jab tum soch lo ki —
+> “Bas! Yeh file ab commit ke laayak hai.”
+> Tab tum git add se usse Staged bana dete ho.
+
+> Git kehta hai:
+> “Accha! Yeh change ab next commit mein jayega. Note kar liya bhai!” ✅
+
+### Commited 
+
+> Aur jab tum finally git commit karte ho —
+> Toh Git us file ka snapshot le leta hai aur usse apni history mein likh deta hai.
+
+> Matlab:
+> “Yeh kaam ab officially Git ki kitaabon mein darj ho gaya!” 📚
+
+```
+Modified → Tumne change kiya
+Staged   → Tumne kaha, “Isko yaad rakh!”
+Committed → Git ne kaha, “Done! Tumhara kaam safe hai.”
+```
