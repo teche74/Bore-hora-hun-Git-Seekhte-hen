@@ -5,6 +5,8 @@
 
 > Aao samajhte hain — Git ke kuch jabra features jo usko sabse alag banate hain. 🔍🔥
 
+<img src= "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYnc5b2J4Zmx4anhjODB6NmM3dGhjcm9mMDF2eHRlcHVrY2lpbXIyZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1AfvSaC0FSRQQ/giphy.gif">
+
 ---
 
 ## 📸 1. Snapshots, Not Differences
@@ -12,9 +14,14 @@
 > Baaki systems kya karte the?
 > Har baar jab file badli — sirf changes ka patch save kar lete the.
 
+
+![Screenshot 2025-03-31 100505](https://github.com/user-attachments/assets/250f9ada-75fe-496c-8745-388a4a91ce04)
+
 > Git ne kaha: "Bhai mujhe patch-vatch ka jhanjhat nahi chahiye!" 😎
 
 > Git har commit pe poore project ka snapshot le leta hai — jaise freeze frame, ek photo us waqt ke repo ki! 📸
+
+![Screenshot 2025-03-31 101116](https://github.com/user-attachments/assets/27a0bafd-756f-42bd-828d-9db30561e183)
 
 ```bash
 Matlab agar tumne koi file mein change kiya,  
@@ -62,6 +69,9 @@ Jiski wajah se Git ko pata hota hai —
 > Git ne bola —
 > "Main tereko pura repo history ke saath dunga,
 > tu khud hi dekhle, jo karna hai locally kar!" 😎
+
+![Screenshot 2025-03-31 103217](https://github.com/user-attachments/assets/af5ae9bf-12b7-42b6-b24b-73a39add44f5)
+
 
 ```bash
 Git mein sab kuch local hota hai:  
@@ -138,4 +148,5 @@ Server ki zarurat sirf tab padti hai jab tum changes push ya pull karte ho.
 > Ye hi repo ka dil hai — history, metadata, sab yahin hota hai.
 > Jab koi repo clone karta hai, to Git Directory hi copy hoti hai. 🔁📂
 
+![Screenshot 2025-03-31 105741](https://github.com/user-attachments/assets/796aabd4-d985-482b-a481-2da5c7080be4)
 
