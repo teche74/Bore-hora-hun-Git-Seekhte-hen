@@ -158,6 +158,10 @@ Jab sab kuch ek hi central server pe store ho — toh fayda toh hai,
   commit kar sakte ho, aur purane versions pe ja sakte ho.
 - Server ke bina bhi kaam rukta nahi.
 
+
+![Screenshot 2025-03-30 155507](https://github.com/user-attachments/assets/445a8aa2-3474-4929-ade9-9da1213fa737)
+
+
 ---
 
 ## 🆚 CVCS vs DVCS
