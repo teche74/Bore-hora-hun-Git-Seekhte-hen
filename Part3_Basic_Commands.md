@@ -329,3 +329,83 @@ git log --patch
 ---
 
 Bhai Git ek yaadash wala dost hai – lekin use tumhe batana padta hai ki kya yaad rakhna hai aur kya bhool jana hai 😄
+
+
+## 🔎 GIT LOG KO FILTER KARNA – Sirf Jo Zarurat Ho Wahi Dekho
+
+---
+
+Kabhi kabhi tumhe **poora history** dekhne ki zarurat nahi hoti, bas kuch specific hi chahiye hota hai – jaise ki:
+
+### 📅 Sirf pichle 2 hafte ka kaam:
+
+```bash
+git log --since=2.weeks
+```
+
+> Ye sirf unhi commits ko dikhayega jo pichle 2 hafton me kiye gaye hain.
+
+---
+
+### 🧑 Kisi particular author ne kya kiya:
+
+```bash
+git log --author="xyz"
+```
+
+> Isse sirf us author ke commits dikhenge jiska naam tumne diya ho (`xyz` ke jagah apna naam daal dena).
+
+---
+
+### 🔍 Commit message me koi specific word ho:
+
+```bash
+git log --grep="bugfix"
+```
+
+> Jaise maan lo tumhe sirf “bugfix” ya “UI update” waale commits dekhne hain.
+
+---
+
+## 🛠️ GADBAD HO GAYI? – `git commit --amend` SE FIX KARO
+
+---
+
+Kabhi kabhi hota hai na – tum commit kar dete ho, aur baad me lagta hai:
+
+- Arre yaar file add karna bhool gaya!
+- Commit message galat daal diya!
+- Jldi commit maar diya bina sochhe!
+
+Us waqt **`git commit --amend`** kaafi kaam ka hota hai.
+
+```bash
+git commit --amend
+```
+
+> Ye tumhara **last commit overwrite** kar deta hai. Tum naya message de sakte ho, aur jo files staged hain, unko hi include karega.
+
+⚠️ **Lekin ek warning** – agar tumne ye commit kisi ke saath share kar liya tha (jaise GitHub push kar diya), to uska history todna risky ho sakta hai. Collaborators confuse ho jaate hain. Isliye amend ko carefully use karo – sirf apne local kaam me.
+
+---
+
+## 🧯 STAGED FILE KO UNSTAGE KARNA – `git restore --staged`
+
+---
+
+Kabhi file ko `git add` kar diya, par baad me laga “abhi to ye ready hi nahi hai” – uss waqt kaam aata hai:
+
+```bash
+git restore --staged <file_name>
+```
+
+> Ye command file ko **unstage** kar degi, mtlb staging area se hata degi. Lekin original file tumhare working directory me rahegi.
+
+⚠️ **Dhyan rahe**: Agar tumne iske saath `--worktree` bhi laga diya, to file ko bilkul waise kar dega jaise last commit me thi – to saari nayi changes bhi udd sakti hain. Soch samajh ke chalana bhai!
+
+---
+
+
+
+
+
