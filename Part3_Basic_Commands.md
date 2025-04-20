@@ -212,10 +212,120 @@ git commit -m "ye file me navin changes kiye"
 ### 🔄 TL;DR:
 
 - `git diff` → Unstaged changes dikhao
-- `git diff --staged` → Staged changes dikhao
+- `git diff --staged / --cached` → Staged changes dikhao
 - `git commit` → Changes ko permanent banao
 - `git commit -m "msg"` → Commit ke sath ek note bhi chipka do
 
 ---
 
 🧠 Git ka kaam sirf file rakhna nahi, **kaunsi file me kya kab kaise badla** – ye pura dhyan rakhna hota hai.
+
+
+
+## 🧹 FILES HATAO YA RENAME KARO – `git rm`, `git mv`, aur `git commit -a`
+
+---
+
+### 🔥 `git rm <file_name>` – File ko hatao Git aur system dono se
+
+Agar koi file Git me tracked hai aur tum use hataana chahte ho, to `git rm <file_name>` likho. Lekin dhyaan rahe, **ye file tumhare system se bhi ud jaayegi** (local se bhi delete ho jaati hai).
+
+```bash
+git rm filename.txt
+```
+
+Agar file staged hai aur hata nahi rahi to **force** lagana padega:
+
+```bash
+git rm --force filename.txt
+# ya short me
+git rm -f filename.txt
+```
+
+---
+
+### 🚫 `git rm --cached <file_name>` – Sirf Git se hatao, system me rehne do
+
+Ye tab kaam aata hai jab file galti se track ho gayi (jaise `.env`, `node_modules` etc.) aur ab tum chahte ho Git usko bhool jaaye – par local folder me file bani rahe:
+
+```bash
+git rm --cached filename.txt
+```
+
+> Ye file ko Git ke tracking se hata dega, lekin tumhare computer se nahi.
+
+---
+
+### 🔁 `git mv` – File ka naam badlo, Git ko bhi pata chale
+
+Normally agar file ka naam rename karte ho manually (Explorer me ya `mv` command se), to Git us change ko track nahi karta. But agar tum chaahte ho ki Git use rename ke roop me hi samjhe, to use karo:
+
+```bash
+git mv old_name.txt new_name.txt
+```
+
+---
+
+### ⚡ `git commit -a` – Bina staging ke seedha commit
+
+Kayi baar tumhe sab kuch ek hi baar me karna hota hai – matlab file me change karo aur seedha commit kar do bina `git add` kiye. Tab use karo:
+
+```bash
+git commit -a -m "sab kuch ek hi baar me"
+```
+
+> **Note:** Ye sirf unhi files pe kaam karta hai jo pehle se tracked ho. Nayi files pe nahi chalega.
+
+---
+
+## 📜 COMMIT HISTORY DEKHO – `git log` ke variations
+
+---
+
+### 📘 Simple log:
+
+```bash
+git log
+```
+
+> Ye dikhaata hai har commit ki puri kahani – jaise ki:
+
+- `checksum` (commit ID)
+- `author_name`
+- `author_email`
+- `commit_message`
+- `date_written`
+
+---
+
+### 🧾 Concise log with stats:
+
+```bash
+git log --stat
+```
+
+> Ye dikhaata hai ki kaunse files me kitne lines badle.
+
+---
+
+### 🔢 Limited commits:
+
+```bash
+git log -3
+```
+
+> Sirf last 3 commits dikha dega.
+
+---
+
+### 🔍 Patch ke sath har commit ka diff:
+
+```bash
+git log --patch
+```
+
+> Har commit ke andar kya-kya lines add/remove hui – sab detail me dikhata hai.
+
+---
+
+Bhai Git ek yaadash wala dost hai – lekin use tumhe batana padta hai ki kya yaad rakhna hai aur kya bhool jana hai 😄
