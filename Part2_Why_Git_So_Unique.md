@@ -190,3 +190,6 @@ Modified → Tumne change kiya
 Staged   → Tumne kaha, “Isko yaad rakh!”
 Committed → Git ne kaha, “Done! Tumhara kaam safe hai.”
 ```
+
+![image](https://github.com/user-attachments/assets/7be86710-1d9c-4b27-ad89-0a1eb5247fb8)
+
